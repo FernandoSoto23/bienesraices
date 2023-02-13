@@ -1,5 +1,5 @@
 <?php 
-    require 'includes/config/database.php';
+    require 'includes/app.php';
     $db = ConectarDB();
 
     //crear email y pwd

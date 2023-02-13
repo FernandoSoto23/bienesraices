@@ -5,8 +5,7 @@
     if(!$id){
         header("Location: ./index.php");
     }
-
-    include 'includes/config/database.php';
+    require 'includes/app.php';
     $db = ConectarDB();
 
     $query = "SELECT * FROM propiedades where id = ${id}";
@@ -15,7 +14,7 @@
         header("Location: ./index.php");
     }
 
-    require 'includes/funciones.php';
+    
     incluirTemplate('header');
 ?>
     <main class="contenedor seccion contenido-centrado">

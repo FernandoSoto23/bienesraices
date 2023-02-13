@@ -1,0 +1,19 @@
+{
+    "name": "a/bienesraices",
+    "description": "Creando un Proyecto",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Sekyh23",
+            "email": "fernandosoto23@hotmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\" : "./classes"
+        }
+    }
+}

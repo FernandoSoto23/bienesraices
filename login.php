@@ -1,21 +1,16 @@
 <?php
-    require 'includes/funciones.php';
+    require 'includes/app.php';
     echo "hola";
-    $auth = estaAutentificado();
+    
 
     if($auth){
         header("Location: ./admin/index.php");
     }
-
-    require 'includes/config/database.php';
     $db = ConectarDB();
     //autenticar el usuario
     $errores = [];
     if($_SERVER["REQUEST_METHOD"] === 'POST'){
-/*         echo "<pre>";
-        var_dump($_POST);
-        echo "</pre>";
- */
+
         $email = mysqli_real_escape_string( $db ,filter_var( $_POST["email"] , FILTER_VALIDATE_EMAIL ) )  ;
         $pwd = mysqli_real_escape_string( $db , $_POST["pwd"] ) ;
 
@@ -25,10 +20,6 @@
         if(!$pwd){
             $errores[] = "El password es obligatorio";
         }
-
-/*         echo "<pre>";
-        var_dump($errores);
-        echo "</pre>"; */
 
         if(empty($errores)){
             $query = "SELECT * FROM usuario WHERE email = '${email}'";

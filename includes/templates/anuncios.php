@@ -1,6 +1,6 @@
 <?php
 
-    require 'includes/config/database.php';
+    
     $db = ConectarDB();
 
     $query = "SELECT * FROM propiedades Limit ${limite}";

@@ -3,10 +3,10 @@
 document.addEventListener('DOMContentLoaded', function(){
     eventListeners();
 
-    darkMode();
+    /* darkMode(); */
 });
 
-function darkMode(){
+/* function darkMode(){
 
 
     //esto es para darkkmode con el sistema de preferencia
@@ -32,7 +32,7 @@ function darkMode(){
     botonDarkMode.addEventListener('click',function(){
         document.body.classList.toggle('dark-mode');
     });
-}
+} */
 
 function eventListeners(){
     const mobileMenu = document.querySelector('.mobile-menu');
