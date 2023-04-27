@@ -114,6 +114,13 @@ class Propiedad{
         return $resultado;
 
     }
+
+    //Busca una propiedad por su id
+
+    public static function find($id){
+        //consulta para obtener datos de propiedad
+            $consultaGetId = "SELECT * FROM propiedades WHERE id = ${id}";
+    }
     public static function ConsultarSQL($query){
         //Consultar la base de datos
         $resultado = self::$db->query($query);

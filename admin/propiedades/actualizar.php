@@ -1,9 +1,7 @@
 <?php
-     require '../../includes/funciones.php';
-     $auth = estaAutentificado();
-     if(!$auth){
-        header("Location: /bienesraices/index.php");
-     }
+     require '../../includes/app.php';
+     estaAutentificado();
+
 
     //validar por id valido
     $id =filter_var($_GET["id"], FILTER_VALIDATE_INT);
@@ -11,9 +9,7 @@
         header('Location: /bienesraices/admin/index.php');
     }
 
-    //base de datos
-    require '../../includes/config/database.php';
-    $db = ConectarDB();
+
 
     //consulta para obtener datos de propiedad
     $consultaGetId = "SELECT * FROM propiedades WHERE id = ${id}";
